@@ -26,7 +26,7 @@ class MyApp (rocket.widget.Widget):
         return rocket.layout.Column(children=(
             rocket.widget.Text('This'),
             rocket.widget.Text('is'),
-            rocket.widget.Text('Rocket'),
+            rocket.widget.Text('example'),
             rocket.layout.Row(children=(
                 rocket.widget.Rectangle(
                     (100, 100), color=(255, 0, 0)
