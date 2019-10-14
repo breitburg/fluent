@@ -23,11 +23,11 @@ import rocket
 
 class MyApp (rocket.widget.Widget):
     def build(self, context=None):
-        return rocket.widget.Column(children=(
+        return rocket.layout.Column(children=(
             rocket.widget.Text('This'),
             rocket.widget.Text('is'),
             rocket.widget.Text('Rocket'),
-            rocket.widget.Row(children=(
+            rocket.layout.Row(children=(
                 rocket.widget.Rectangle(
                     (100, 100), color=(255, 0, 0)
                 ),
@@ -54,8 +54,9 @@ Result of running application:
 Currently available widgets:
 
 - Layouts
-    - Column (`rocket.widget.Column`)
-    - Row (`rocket.widget.Row`)
+    - Column (`rocket.layout.Column`)
+    - Row (`rocket.layout.Row`)
+    - Padding (`rocket.layout.Padding`)
     
 - Primitives
     - Rectangle (`rocket.widget.Rectangle`)

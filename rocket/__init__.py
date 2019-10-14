@@ -1,4 +1,4 @@
-from rocket import widget, render
+from rocket import widget, render, layout
 
 from pygame import event, QUIT, display
 
