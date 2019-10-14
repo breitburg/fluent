@@ -21,3 +21,17 @@ class Stack (CoreWidget):
             rectangle[self.__coordinate__] += self.spacing
 
         return rectangle[0], rectangle[1]
+
+
+class HorizontalStack (Stack):
+    def __init__(self, widgets, spacing=0):
+        super(HorizontalStack, self).__init__(
+            widgets=widgets, spacing=spacing, coordinate=0
+        )
+
+
+class VerticalStack (Stack):
+    def __init__(self, widgets, spacing=0):
+        super(VerticalStack, self).__init__(
+            widgets=widgets, spacing=spacing, coordinate=1
+        )

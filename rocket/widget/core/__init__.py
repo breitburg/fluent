@@ -5,7 +5,7 @@ class Widget:
     def build(self, context=None): return NotImplemented
 
     def render(self, xy):
-        return self.build().render(xy=xy)
+        return self.build(context=self).render(xy=xy)
 
 
 class CoreWidget (Widget):
