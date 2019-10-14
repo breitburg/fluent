@@ -1,6 +1,6 @@
 # ![](https://imgur.com/download/Hb8KcFA/)
 
-Powerful and simple mobile applications framework. (Inspired by [Flutter](https://flutter.dev/))
+Powerful mobile development framework. (Inspired by [Flutter](https://flutter.dev/))
 
 ```python
 import rocket
@@ -20,13 +20,14 @@ rocket.run_app(
 ```python
 import rocket
 
+
 class MyApp (rocket.widget.Widget):
     def build(self, context=None):
-        return rocket.widget.VerticalStack((
+        return rocket.widget.Column(children=(
             rocket.widget.Text('This'),
             rocket.widget.Text('is'),
             rocket.widget.Text('Rocket'),
-            rocket.widget.HorizontalStack((
+            rocket.widget.Row(children=(
                 rocket.widget.Rectangle(
                     (100, 100), color=(255, 0, 0)
                 ),
@@ -39,7 +40,9 @@ class MyApp (rocket.widget.Widget):
             ), spacing=0)
         ), spacing=20)
 
-rocket.run_app(MyApp())
+
+if __name__ == '__main__':
+    rocket.run_app(MyApp())
 ```
 
 Result of running application:
@@ -50,9 +53,9 @@ Result of running application:
 
 Currently available widgets:
 
-- Stack
-    - Vertical Stack (`rocket.widget.VerticalStack`)
-    - Horizontal Stack (`rocket.widget.HorizontalStack`)
+- Layouts
+    - Column (`rocket.widget.Column`)
+    - Row (`rocket.widget.Row`)
     
 - Primitives
     - Rectangle (`rocket.widget.Rectangle`)

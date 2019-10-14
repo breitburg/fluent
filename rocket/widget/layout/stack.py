@@ -24,14 +24,14 @@ class Stack (CoreWidget):
 
 
 class Row (Stack):
-    def __init__(self, widgets, spacing=0):
+    def __init__(self, children, spacing=0):
         super(Row, self).__init__(
-            widgets=widgets, spacing=spacing, coordinate=0
+            widgets=children, spacing=spacing, coordinate=0
         )
 
 
 class Column (Stack):
-    def __init__(self, widgets, spacing=0):
+    def __init__(self, children, spacing=0):
         super(Column, self).__init__(
-            widgets=widgets, spacing=spacing, coordinate=1
+            widgets=children, spacing=spacing, coordinate=1
         )
