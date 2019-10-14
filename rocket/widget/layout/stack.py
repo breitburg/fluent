@@ -23,15 +23,15 @@ class Stack (CoreWidget):
         return rectangle[0], rectangle[1]
 
 
-class HorizontalStack (Stack):
+class Row (Stack):
     def __init__(self, widgets, spacing=0):
-        super(HorizontalStack, self).__init__(
+        super(Row, self).__init__(
             widgets=widgets, spacing=spacing, coordinate=0
         )
 
 
-class VerticalStack (Stack):
+class Column (Stack):
     def __init__(self, widgets, spacing=0):
-        super(VerticalStack, self).__init__(
+        super(Column, self).__init__(
             widgets=widgets, spacing=spacing, coordinate=1
         )
