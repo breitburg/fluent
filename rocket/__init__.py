@@ -1,4 +1,5 @@
 from rocket import widget, render
+
 from pygame import event, QUIT, display
 
 
@@ -8,3 +9,5 @@ def run_app(widget):
         for i in event.get():
             if i.type == QUIT: exit()
         display.update()
+        render.surface.fill(color=(0, 0, 0))
+        render.clock.tick(60)
