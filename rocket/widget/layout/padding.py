@@ -9,7 +9,7 @@ class Padding (CoreWidget):
         self.widget = widget
 
     def render(self, xy):
-        rectangle = self.widget.build().render(xy=(
+        rectangle = self.widget.render(xy=(
             self.padding + xy[0],
             self.padding + xy[1]
         ))
