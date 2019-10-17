@@ -1,10 +1,10 @@
-from rocket import widget, render
+from rocket import widget, render, display
 from rocket.widget import layout
 
-from pygame import event, QUIT, display
 
+def launch(widget):
+    from pygame import event, QUIT, display
 
-def run_app(widget):
     while True:
         widget.render(xy=(0, 0))
 

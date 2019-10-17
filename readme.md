@@ -5,7 +5,7 @@ Powerful mobile development framework. (Inspired by [Flutter](https://flutter.de
 ```python
 import rocket
 
-rocket.run_app(
+rocket.launch(
     rocket.widget.Text('Hello, world')
 )
 ```
@@ -42,7 +42,7 @@ class MyApp (rocket.widget.Widget):
 
 
 if __name__ == '__main__':
-    rocket.run_app(MyApp())
+    rocket.launch(MyApp())
 ```
 
 Result of running application:
