@@ -18,7 +18,7 @@ class Stack (CoreWidget):
             size = widget.render(xy=(xy[0] + offset[0], xy[1] + offset[1]))
             offset[self.__coordinate__] += size[self.__coordinate__] + self.spacing
 
-            rectangle[0], rectangle[1] = rectangle[0] + size[0], rectangle[1] + size[1]
+            rectangle[0], rectangle[1] = max(rectangle[0], size[0]), rectangle[1] + size[1]
             rectangle[self.__coordinate__] += self.spacing
 
         return rectangle[0], rectangle[1]

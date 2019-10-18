@@ -21,7 +21,8 @@ class Overlay (CoreWidget):
 
         if self.align[1] == 'right':
             horizontal_padding = bottom_rectangle[0] - top_rectangle[0]
-        elif self.align[0] == 'center':
+        elif self.align[1] == 'center':
             horizontal_padding = bottom_rectangle[0] / 2 - top_rectangle[0] / 2
 
         self.top.render(xy=(xy[0] + horizontal_padding, xy[1] + vertical_padding))
+        return bottom_rectangle
