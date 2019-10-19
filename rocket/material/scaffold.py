@@ -2,11 +2,11 @@ from rocket.widget import Widget, Overlay, Column, Rectangle
 
 
 class Scaffold (Widget):
-    def __init__(self, app_bar, home, floating_action_button=None):
+    def __init__(self, app_bar, body, floating_action_button=None):
         super(Scaffold, self).__init__()
 
         self.app_bar = app_bar
-        self.home = home
+        self.home = body
         self.floating_action_button = floating_action_button
 
     def build(self):

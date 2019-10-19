@@ -12,5 +12,6 @@ def launch(widget):
             if i.type == QUIT: exit()
 
         display.update()
+        render.update_touches()
         render.surface.fill(color=(0, 0, 0))
         render.clock.tick(60)
