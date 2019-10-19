@@ -16,3 +16,5 @@ def update_touches():
     for event in pygame.event.get():
         if event.type == pygame.MOUSEBUTTONUP:
             touches.append(event.pos)
+        elif event.type == pygame.QUIT:
+            quit()
