@@ -59,7 +59,7 @@ Currently available widgets:
     - Padding (`rocket.widget.Padding`)
     - Overlay (`rocket.widget.Overlay`)
     
-- Primitives
+- Shapes
     - Rectangle (`rocket.widget.Rectangle`)
     - Text (`rocket.widget.Text`)
     
