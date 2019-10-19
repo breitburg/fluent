@@ -7,14 +7,14 @@ class MyApp (widget.Widget):
     def build(self):
         return material.Scaffold(
             app_bar=material.AppBar(
-                title=widget.Text('Hello, world')
+                title=widget.Text('Material App Demo')
             ),
             body=material.Page(
                 widget.Padding(
-                    widget=widget.Row(
+                    widget=widget.Column(
                         children=(
-                            widget.Rectangle(size=(self.hello, self.hello), color=(0, 0, 0)),
-                            material.PushButton('Нажмите сюда', pressed=self.on_button_press)
+                            widget.Text(f'Number: {self.hello}', color=(20, 20, 20)),
+                            material.PushButton('Press here', pressed=self.on_button_press)
                         ),
                         spacing=20
                     ),

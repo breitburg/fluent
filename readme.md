@@ -2,6 +2,11 @@
 
 Powerful mobile development framework. (Inspired by [Flutter](https://flutter.dev/))
 
+![](https://imgur.com/download/nEzr53g/)
+
+
+## Example
+
 ```python
 import rocket
 
@@ -13,7 +18,7 @@ rocket.launch(
 ![](https://imgur.com/download/n2kudlu/)
 
 
-## Advanced Example
+### Advanced Example
 
 1. Writing your own widgets:
 
@@ -45,9 +50,45 @@ if __name__ == '__main__':
     rocket.launch(MyApp())
 ```
 
-Result of running application:
-
 ![Result](https://imgur.com/download/yn8PeQt/)
+
+
+### Material App Example
+
+```python
+from rocket import launch, material, widget
+
+
+class MyApp (widget.Widget):
+    hello = 0
+
+    def build(self):
+        return material.Scaffold(
+            app_bar=material.AppBar(
+                title=widget.Text('Material App Demo')
+            ),
+            body=material.Page(
+                widget.Padding(
+                    widget=widget.Column(
+                        children=(
+                            widget.Text(f'Number: {self.hello}', color=(20, 20, 20)),
+                            material.PushButton('Press here', pressed=self.on_button_press)
+                        ),
+                        spacing=20
+                    ),
+                    padding=20
+                )
+            )
+        )
+
+    def on_button_press(self):
+        self.hello += 1
+
+
+launch(MyApp())
+```
+
+![](http://g.recordit.co/KNeT9XIBas.gif)
 
 ## Widgets
 
@@ -61,8 +102,16 @@ Currently available widgets:
     
 - Shapes
     - Rectangle (`rocket.widget.Rectangle`)
+    - Ellipse (`rocket.widget.Ellipse`)
     - Text (`rocket.widget.Text`)
     
+- Material
+    - Push Button (`rocket.material.PushButton`)
+    - Floating Action Button (`rocket.material.FloatingActionButton`)
+    - Page (`rocket.material.Page`)
+    - Scaffold (`rocket.material.Scaffold`)
+    - App Bar (`rocket.material.AppBar`)
+
 ## Rendering
 
 It renders screen via `pygame`, then `pygame` based on `sdl2`.
