@@ -5,6 +5,17 @@ Powerful mobile development framework. (Inspired by [Flutter](https://flutter.de
 ![](https://imgur.com/download/nEzr53g/)
 
 
+## Installation
+
+1. Download library from releases on GitHub
+2. Install downloaded package
+
+```console
+pip install rocket-x.x.x.tar.gz
+```
+
+3. Enjoy!
+
 ## Example
 
 ```python
@@ -16,79 +27,6 @@ rocket.launch(
 ```
 
 ![](https://imgur.com/download/n2kudlu/)
-
-
-### Advanced Example
-
-1. Writing your own widgets:
-
-```python
-import rocket
-
-
-class MyApp (rocket.widget.Widget):
-    def build(self):
-        return rocket.widget.Column(children=(
-            rocket.widget.Text('This'),
-            rocket.widget.Text('is'),
-            rocket.widget.Text('example'),
-            rocket.widget.Row(children=(
-                rocket.widget.Rectangle(
-                    (100, 100), color=(255, 0, 0)
-                ),
-                rocket.widget.Rectangle(
-                    (100, 100), color=(0, 255, 0)
-                ),
-                rocket.widget.Rectangle(
-                    (100, 100), color=(0, 0, 255)
-                )
-            ), spacing=0)
-        ), spacing=20)
-
-
-if __name__ == '__main__':
-    rocket.launch(MyApp())
-```
-
-![Result](https://imgur.com/download/yn8PeQt/)
-
-
-### Material App Example
-
-```python
-from rocket import launch, material, widget
-
-
-class MyApp (widget.Widget):
-    hello = 0
-
-    def build(self):
-        return material.Scaffold(
-            app_bar=material.AppBar(
-                title=widget.Text('Material App Demo')
-            ),
-            body=material.Page(
-                widget.Padding(
-                    widget=widget.Column(
-                        children=(
-                            widget.Text(f'Number: {self.hello}', color=(20, 20, 20)),
-                            material.PushButton('Press here', pressed=self.on_button_press)
-                        ),
-                        spacing=20
-                    ),
-                    padding=20
-                )
-            )
-        )
-
-    def on_button_press(self):
-        self.hello += 1
-
-
-launch(MyApp())
-```
-
-![](http://g.recordit.co/KNeT9XIBas.gif)
 
 ## Widgets
 
