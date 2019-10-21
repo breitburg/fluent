@@ -3,7 +3,7 @@ from pathlib import Path
 
 setup(
     name='rocket',
-    version='1.0',
+    version='0.0.1b1',
     author='Upbits',
     include_package_data=True,
     url='https://github.com/upbits/rocket',
