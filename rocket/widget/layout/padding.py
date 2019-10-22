@@ -2,11 +2,11 @@ from rocket.widget.core import CoreWidget
 
 
 class Padding (CoreWidget):
-    def __init__(self, widget, padding):
+    def __init__(self, child, padding):
         super(Padding, self).__init__()
 
         self.padding = padding
-        self.widget = widget
+        self.widget = child
 
     def render(self, xy):
         rectangle = self.widget.render(xy=(

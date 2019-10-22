@@ -1,10 +1,9 @@
-from rocket import launch, material
+from rocket import launch, material, widget
 
 
-launch(
-    material.Page(
-        widget=material.PushButton(
-            text='Hello'
-        )
-    )
-)
+class MyApp (widget.Widget):
+    def build(self):
+        return material.PushButton('Hello world')
+
+
+launch(MyApp())

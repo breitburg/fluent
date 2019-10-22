@@ -3,10 +3,10 @@ from rocket.display import get_size
 
 
 class Page (Widget):
-    def __init__(self, widget, background=(255, 255, 255)):
+    def __init__(self, child, background=(255, 255, 255)):
         super(Widget, self).__init__()
 
-        self.widget = widget
+        self.widget = child
         self.background = background
 
     def build(self):

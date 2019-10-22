@@ -3,10 +3,10 @@ from rocket.display import get_size
 
 
 class AppBar (Widget):
-    def __init__(self, title, title_align=('center', 'left'), actions=None, color=(98, 33, 234)):
+    def __init__(self, child, title_align=('center', 'left'), actions=None, color=(98, 33, 234)):
         super(AppBar, self).__init__()
 
-        self.title = title
+        self.title = child
         self.title_align = title_align
         self.actions = actions
         self.color = color
@@ -14,7 +14,7 @@ class AppBar (Widget):
     def build(self):
         return Overlay(
                 top=Padding(
-                    widget=self.title,
+                    child=self.title,
                     padding=30
                 ),
                 bottom=Rectangle(

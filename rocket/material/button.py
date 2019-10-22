@@ -2,12 +2,12 @@ from rocket.widget import Widget, Overlay, Padding, Text, Rectangle, Ellipse
 
 
 class PushButton (Widget):
-    def __init__(self, text, color=(98, 33, 234), padding=20, pressed=lambda: None):
+    def __init__(self, child, color=(98, 33, 234), padding=20, pressed=lambda: None):
         super(PushButton, self).__init__(pressed=pressed)
 
         self.color = color
         self.top_text = Padding(
-            widget=Text(text=text, color=(255, 255, 255) if sum(color) < 382.5 else (0, 0, 0)),
+            child=child,
             padding=padding
         )
 
@@ -25,6 +25,6 @@ class FloatingActionButton (Widget):
 
     def build(self):
         return Padding(
-            widget=Ellipse(size=(80, 80), color=self.color),
+            child=Ellipse(size=(80, 80), color=self.color),
             padding=20
         )

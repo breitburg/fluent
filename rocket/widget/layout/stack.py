@@ -2,11 +2,11 @@ from rocket.widget.core import CoreWidget
 
 
 class Stack (CoreWidget):
-    def __init__(self, widgets, spacing=0, coordinate=0):
-        assert widgets != ()
+    def __init__(self, child, spacing=0, coordinate=0):
+        assert child != ()
         super(Stack, self).__init__()
 
-        self.widgets = widgets
+        self.widgets = child
         self.spacing = spacing
         self.__coordinate__ = coordinate
 
@@ -27,12 +27,12 @@ class Stack (CoreWidget):
 class Row (Stack):
     def __init__(self, children, spacing=0):
         super(Row, self).__init__(
-            widgets=children, spacing=spacing, coordinate=0
+            child=children, spacing=spacing, coordinate=0
         )
 
 
 class Column (Stack):
     def __init__(self, children, spacing=0):
         super(Column, self).__init__(
-            widgets=children, spacing=spacing, coordinate=1
+            child=children, spacing=spacing, coordinate=1
         )
