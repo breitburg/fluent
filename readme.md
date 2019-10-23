@@ -1,4 +1,6 @@
-# ![](https://imgur.com/download/cRa9Nhb/)
+<p align="center">
+  <img src="https://imgur.com/download/cRa9Nhb/"/>
+</p>
 
 Powerful mobile development framework. (Inspired by [Flutter](https://flutter.dev/))
 
@@ -8,48 +10,24 @@ Powerful mobile development framework. (Inspired by [Flutter](https://flutter.de
 ## Installation
 
 1. Download library from releases on GitHub
-2. Install downloaded package
+2. Install downloaded package through `pip` or `setuptools`
 
-```console
-pip install rocket-x.x.x.tar.gz
-```
+## Build
 
-3. Enjoy!
+How to build your apps and get fully working binary.
 
-## Example
+### Android
 
-```python
-import rocket
+To build your app for Android you need to use [`python-for-android`](https://github.com/kivy/python-for-android) project. Build your app following the instructions like if you`re building a SDL app.
 
-rocket.launch(
-    rocket.widget.Text('Hello, world')
-)
-```
+### iOS
 
-![](https://imgur.com/download/n2kudlu/)
+Currently is no way to build your app for iOS, but we plan to implement that in the future.
 
-## Widgets
+### Linux/macOS/Windows
 
-Currently available widgets:
+To build your app for Windows/Linux/macOS you need to use [`pyinstaller`](http://www.pyinstaller.org) project.
 
-- Layouts
-    - Column (`rocket.widget.Column`)
-    - Row (`rocket.widget.Row`)
-    - Padding (`rocket.widget.Padding`)
-    - Overlay (`rocket.widget.Overlay`)
-    
-- Shapes
-    - Rectangle (`rocket.widget.Rectangle`)
-    - Ellipse (`rocket.widget.Ellipse`)
-    - Text (`rocket.widget.Text`)
-    
-- Material
-    - Push Button (`rocket.material.PushButton`)
-    - Floating Action Button (`rocket.material.FloatingActionButton`)
-    - Page (`rocket.material.Page`)
-    - Scaffold (`rocket.material.Scaffold`)
-    - App Bar (`rocket.material.AppBar`)
+## How render works?
 
-## Rendering
-
-It renders screen via `pygame`, then `pygame` based on `sdl2`.
+It renders widgets via `pygame.draw` module, then `pygame` based on `sdl2`. So, we can say that renders widgets through SDL2. In the future all pygame drawing methods will be replaced with sdl or different rendering library if it will be needed.
