@@ -1,8 +1,5 @@
-<p align="center">
-  <img src="https://imgur.com/download/cRa9Nhb/"/>
-</p>
-
-Powerful mobile development framework. (Inspired by [Flutter](https://flutter.dev/))
+<p align="center"><img src="https://imgur.com/download/cRa9Nhb/"/></p>
+<p align="center">Powerful mobile development framework. (Inspired by Flutter)</p>
 
 ![](https://imgur.com/download/nEzr53g/)
 
