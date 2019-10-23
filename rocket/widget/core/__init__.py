@@ -14,7 +14,7 @@ class Widget:
         rectangle = self.build().render(xy=xy)
         for touch in touches:
             if Rect(xy[0], xy[1], rectangle[0], rectangle[1]).collidepoint(touch) and self.pressed is not None:
-                self.pressed()
+                self.pressed(self)
 
         return rectangle
 
