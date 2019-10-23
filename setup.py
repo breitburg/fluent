@@ -3,10 +3,10 @@ from pathlib import Path
 
 setup(
     name='rocket',
-    version='0.0.1b1',
-    author='Upbits',
+    version='0.0.2',
+    author='Breitburg',
     include_package_data=True,
-    url='https://github.com/upbits/rocket',
+    url='https://github.com/breitburg/rocket',
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
