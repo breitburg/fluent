@@ -1,4 +1,5 @@
 from rocket.widget import Widget, Overlay, Column, Rectangle
+from rocket.display import get_size
 
 
 class Scaffold (Widget):
@@ -6,7 +7,7 @@ class Scaffold (Widget):
         super(Scaffold, self).__init__()
 
         self.app_bar = app_bar
-        self.home = body
+        self.body = body
         self.floating_action_button = floating_action_button
 
     def build(self):
@@ -15,7 +16,12 @@ class Scaffold (Widget):
             bottom=Column(
                 children=(
                     self.app_bar,
-                    self.home
+                    Overlay(
+                        top=self.body,
+                        bottom=Rectangle(
+                            size=(get_size()[0], get_size()[1] - 80)
+                        )
+                    )
                 )
             ),
             align=('bottom', 'right')

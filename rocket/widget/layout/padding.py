@@ -6,10 +6,10 @@ class Padding (CoreWidget):
         super(Padding, self).__init__()
 
         self.padding = padding
-        self.widget = child
+        self.child = child
 
     def render(self, xy):
-        rectangle = self.widget.render(xy=(
+        rectangle = self.child.render(xy=(
             self.padding + xy[0],
             self.padding + xy[1]
         ))
