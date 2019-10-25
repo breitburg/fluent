@@ -1,5 +1,6 @@
 from rocket import widget, render, display
 from rocket.widget import layout
+from reloadr import autoreload as auto_reload
 
 
 def launch(widget):
