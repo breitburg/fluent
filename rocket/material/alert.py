@@ -11,21 +11,18 @@ class Alert (Widget):
         self.button = button
 
     def build(self):
-        rectangles = [rectangle.get_size() for rectangle in [self.title, self.subtitle, self.button]]
-
-        return Overlay(
-            top=Padding(
+        rectangle = Padding(
                 child=Column(
                     children=(self.title, self.subtitle, self.button),
-                    spacing=5
+                    spacing=10
                 ),
                 padding=20
-            ),
+            )
+
+        return Overlay(
+            top=rectangle,
             bottom=Rectangle(
-                size=(
-                    max([rectangle[0] for rectangle in rectangles]),
-                    sum([rectangle[1] for rectangle in rectangles])
-                )
+                size=rectangle.get_size()
             )
         )
 
