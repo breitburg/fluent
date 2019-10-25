@@ -14,6 +14,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'pygame'
+        'pygame',
+        'reloadr'
     ]
 )
