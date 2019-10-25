@@ -1,4 +1,4 @@
-from rocket.widget import Widget, Rectangle, Text, Overlay, Padding, Column, Row
+from rocket.widget import Widget, Rectangle, Text, Overlay, Padding, Column
 from rocket.material import PushButton
 
 

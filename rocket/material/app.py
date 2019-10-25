@@ -4,7 +4,7 @@ from rocket.material import Alert, PushButton
 
 
 class App (Widget):
-    def __init__(self, home, overlay=Rectangle((-1, -1))):
+    def __init__(self, home, overlay=Rectangle((0, 0))):
         super(App, self).__init__()
 
         self.home = home
@@ -19,9 +19,9 @@ class App (Widget):
     def display_alert(self, title, subtitle, button):
         self.overlay = Overlay(
             top=Alert(
-                title=Text(title),
+                title=Text(title, font='bold'),
                 subtitle=Text(subtitle),
-                button=PushButton(button)
+                button=PushButton(Text(button))
             ),
             bottom=Rectangle(
                 size=get_size(),
