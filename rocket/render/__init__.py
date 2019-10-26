@@ -5,7 +5,7 @@ environ['PYGAME_HIDE_SUPPORT_PROMPT'] = 'hide'
 pygame.init()
 
 pygame.display.set_caption('Rocket')
-surface = pygame.display.set_mode((800, 600))
+surface = pygame.display.set_mode((400, 650))
 
 font_regular = pygame.font.Font(path.join(
     __file__.replace(path.join('render', '__init__.py'), ''),
