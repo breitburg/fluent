@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-from pathlib import Path
 
 setup(
     name='rocket',
@@ -14,7 +13,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'pygame',
+        'pysdl2',
         'reloadr'
     ]
 )

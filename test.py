@@ -1,22 +1,17 @@
-from rocket.material import *
+from rocket.launch import launch
+from rocket.widget.shapes import Box
+from rocket.widget.core import Widget
+from reloadr import autoreload
 
-
-@auto_reload
-class MyApp (Widget):
-    text_color = (0, 0, 0)
-
+@autoreload
+class Test(Widget):
     def build(self):
-        return Column(
-            children=(
-                PushButton(
-                    child=Text('Press here'),
-                    pressed=self.set_text_color
-                ),
-                Text('Hahahah', color=self.text_color),
-            )
-        )
+        return Box((100, 200))
 
-    def set_text_color(self, button):
-        self.text_color = (255, 255, 255)
+
+class MyApp(Widget):
+    def build(self):
+        return Test()
+
 
 launch(MyApp())
