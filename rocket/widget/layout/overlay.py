@@ -13,10 +13,14 @@ class Overlay(GenericWidget):
         self.bottom.render(xy=xy)
         horizontal_padding = vertical_padding = 0
 
-        for coordinate in range(0, 2):
-            if self.align[coordinate - 1] == 'bottom':
-                vertical_padding = self.bottom.size[coordinate] - self.top.size[coordinate]
-            elif self.align[coordinate - 1] == 'center':
-                vertical_padding = self.bottom.size[coordinate] / 2 - self.top.size[coordinate] / 2
+        if self.align[0] == 'bottom':
+            vertical_padding = self.bottom.size[1] - self.top.size[1]
+        elif self.align[0] == 'center':
+            vertical_padding = self.bottom.size[1] / 2 - self.top.size[1] / 2
+
+        if self.align[1] == 'right':
+            horizontal_padding = self.bottom.size[0] - self.top.size[0]
+        elif self.align[1] == 'center':
+            horizontal_padding = self.bottom.size[0] / 2 - self.top.size[0] / 2
 
         self.top.render(xy=(int(xy[0] + horizontal_padding), int(xy[1] + vertical_padding)))
