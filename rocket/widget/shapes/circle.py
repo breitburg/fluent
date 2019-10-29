@@ -6,9 +6,8 @@ class FilledCircle(GenericWidget):
     def __init__(self, radius, color=(255, 255, 255, 255)):
         self.radius = radius
         self.color = color
-        self.size = (self.radius * 2, self.radius * 2)
 
-        super(FilledCircle, self).__init__()
+        super(FilledCircle, self).__init__(size=(self.radius * 2, self.radius * 2))
 
     def render(self, xy):
         filledCircleRGBA(
@@ -23,9 +22,8 @@ class OutlineCircle(GenericWidget):
         self.radius = radius
         self.color = color
         self.antialiasing = antialiasing
-        self.size = (self.radius * 2, self.radius * 2)
 
-        super(OutlineCircle, self).__init__()
+        super(OutlineCircle, self).__init__(size=(self.radius * 2, self.radius * 2))
 
     def render(self, xy):
         method = aacircleRGBA if self.antialiasing else circleRGBA

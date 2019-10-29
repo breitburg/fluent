@@ -1,14 +1,26 @@
 class Widget:
-    def __init__(self):
-        pass
+    size: tuple = None
 
-    def build(self):
+    def __init__(self, context):
+        self.context = context
+        self._update_instance()
+
+    def build(self, context):
         return NotImplemented
 
     def render(self, xy):
-        self.build().render(xy=xy)
+        self._update_instance()
+        self._instance.render(xy=xy)
+
+    def _update_instance(self):
+        self._instance = self.build(context=self.context)
+        self.size = self._instance.size
 
 
 class GenericWidget(Widget):
-    def build(self):
+    def __init__(self, size):
+        self.size = size
+        super(GenericWidget, self).__init__(self)
+
+    def build(self, context):
         return self

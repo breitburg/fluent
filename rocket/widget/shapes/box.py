@@ -5,10 +5,9 @@ from rocket.widget.core import GenericWidget
 
 class FilledBox(GenericWidget):
     def __init__(self, size, color=(255, 255, 255, 255)):
-        self.size = size
         self.color = color
 
-        super(FilledBox, self).__init__()
+        super(FilledBox, self).__init__(size=size)
 
     def render(self, xy):
         boxRGBA(
@@ -20,11 +19,10 @@ class FilledBox(GenericWidget):
 
 class FilledRoundedBox(GenericWidget):
     def __init__(self, size, color=(255, 255, 255, 255), radius=10):
-        self.size = size
         self.color = color
         self.radius = radius
 
-        super(FilledRoundedBox, self).__init__()
+        super(FilledRoundedBox, self).__init__(size=size)
 
     def render(self, xy):
         roundedBoxRGBA(
@@ -36,10 +34,9 @@ class FilledRoundedBox(GenericWidget):
 
 class OutlineBox(GenericWidget):
     def __init__(self, size, color=(255, 255, 255, 255)):
-        self.size = size
         self.color = color
 
-        super(OutlineBox, self).__init__()
+        super(OutlineBox, self).__init__(size=size)
 
     def render(self, xy):
         rectangleRGBA(
@@ -51,11 +48,10 @@ class OutlineBox(GenericWidget):
 
 class OutlineRoundedBox(GenericWidget):
     def __init__(self, size, color=(255, 255, 255, 255), radius=10):
-        self.size = size
         self.color = color
         self.radius = radius
 
-        super(OutlineRoundedBox, self).__init__()
+        super(OutlineRoundedBox, self).__init__(size=size)
 
     def render(self, xy):
         roundedRectangleRGBA(
