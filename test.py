@@ -12,7 +12,7 @@ class MyApp(Widget):
             child=Overlay(
                 top=FilledCircle(radius=50, color=(0, 255, 0, 100)),
                 bottom=FilledCircle(radius=100, color=(255, 0, 0, 255)),
-                align=(Align.top, Align.left)
+                align=(Align.right, Align.center)
             ),
             value=20
         )
