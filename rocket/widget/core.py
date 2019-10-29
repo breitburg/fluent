@@ -1,20 +1,18 @@
 class Widget:
-    size: tuple = None
-
     def __init__(self, context):
-        self.context = context
-        self._update_instance()
+        self.__context__ = context
+        self.__update_instance__()
 
     def build(self, context):
         return NotImplemented
 
     def render(self, xy):
-        self._update_instance()
-        self._instance.render(xy=xy)
+        self.__update_instance__()
+        self.__instance__.render(xy=xy)
 
-    def _update_instance(self):
-        self._instance = self.build(context=self.context)
-        self.size = self._instance.size
+    def __update_instance__(self):
+        self.__instance__ = self.build(context=self.__context__)
+        self.size = self.__instance__.size
 
 
 class GenericWidget(Widget):

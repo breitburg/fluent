@@ -1,5 +1,5 @@
 from rocket.launch import launch
-from rocket.widget.shapes.circle import FilledCircle
+from rocket.widget.shapes import FilledBox
 from rocket.widget.core import Widget
 from reloadr import autoreload
 
@@ -8,9 +8,10 @@ class Test2(Widget):
     def build(self, context):
         return Test(self)
 
+
 class Test(Widget):
     def build(self, context):
-        return FilledCircle(10)
+        return FilledBox(size=(100, 100))
 
 
 class MyApp(Widget):
@@ -19,4 +20,4 @@ class MyApp(Widget):
         return text
 
 
-launch(MyApp(None))
+launch(MyApp)
