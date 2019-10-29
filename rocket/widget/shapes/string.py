@@ -1,5 +1,4 @@
 from rocket.render import stringRGBA, window
-from sdl2.render import SDL_GetRendererOutputSize
 from rocket.widget.core import GenericWidget
 
 
@@ -7,6 +6,7 @@ class String(GenericWidget):
     def __init__(self, text, color=(255, 255, 255, 255)):
         self.text = text
         self.color = color
+        # TODO: Add text size calculation
 
         super(String, self).__init__()
 
