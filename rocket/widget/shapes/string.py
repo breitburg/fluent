@@ -8,7 +8,7 @@ class String(GenericWidget):
         self.color = color
         # TODO: Add text size calculation
 
-        super(String, self).__init__((0, 0))
+        super(String, self).__init__(size=(0, 0))
 
     def render(self, xy):
         stringRGBA(

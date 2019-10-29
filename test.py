@@ -1,23 +1,21 @@
-from rocket.launch import launch
-from rocket.widget.shapes import FilledBox
 from rocket.widget.core import Widget
+from rocket.widget.shapes import FilledCircle
+from rocket.launch import launch
+from rocket.widget.layout import Overlay, Padding, Align
 from reloadr import autoreload
 
 
-class Test2(Widget):
-    def build(self, context):
-        return Test(self)
-
-
-class Test(Widget):
-    def build(self, context):
-        return FilledBox(size=(100, 100))
-
-
+@autoreload
 class MyApp(Widget):
-    def build(self, context):
-        text = Test2(self)
-        return text
+    def build(self):
+        return Padding(
+            child=Overlay(
+                top=FilledCircle(radius=50, color=(0, 255, 0, 100)),
+                bottom=FilledCircle(radius=100, color=(255, 0, 0, 255)),
+                align=(Align.top, Align.left)
+            ),
+            value=20
+        )
 
 
-launch(MyApp)
+launch(MyApp())
