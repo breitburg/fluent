@@ -1,9 +1,9 @@
 from rocket.render import stringRGBA, window
-from rocket.widget.core import GenericWidget
+from rocket.widget import GenericWidget, color
 
 
 class String(GenericWidget):
-    def __init__(self, text, color=(255, 255, 255, 255)):
+    def __init__(self, text, color=color.white):
         self.text = text
         self.color = color
         # TODO: Add text size calculation
@@ -14,5 +14,5 @@ class String(GenericWidget):
         stringRGBA(
             window.renderer.sdlrenderer,
             xy[0], xy[1], bytes(self.text, 'utf-8'),
-            self.color[0], self.color[1], self.color[2], self.color[3]
+            self.color.red, self.color.green, self.color.blue, self.color.alpha
         )

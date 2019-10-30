@@ -1,4 +1,4 @@
 from rocket.widget.layout.padding import Padding
-from rocket.widget.layout.align import Align
 from rocket.widget.layout.overlay import Overlay
 from rocket.widget.layout.spacer import Spacer
+from rocket.widget.layout import align

@@ -1,9 +1,9 @@
 from rocket.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window
-from rocket.widget.core import GenericWidget
+from rocket.widget import GenericWidget, color
 
 
 class FilledCircle(GenericWidget):
-    def __init__(self, radius, color=(255, 255, 255, 255)):
+    def __init__(self, radius, color=color.white):
         self.radius = radius
         self.color = color
 
@@ -13,12 +13,12 @@ class FilledCircle(GenericWidget):
         filledCircleRGBA(
             window.renderer.sdlrenderer,
             xy[0] + self.radius, xy[1] + self.radius, self.radius,
-            self.color[0], self.color[1], self.color[2], self.color[3]
+            self.color.red, self.color.green, self.color.blue, self.color.alpha
         )
 
 
 class OutlineCircle(GenericWidget):
-    def __init__(self, radius, color=(255, 255, 255, 255), anti_aliasing=True):
+    def __init__(self, radius, color=color.white, anti_aliasing=True):
         self.radius = radius
         self.color = color
         self.anti_aliasing = anti_aliasing
@@ -30,5 +30,5 @@ class OutlineCircle(GenericWidget):
         method(
             window.renderer.sdlrenderer,
             xy[0] + self.radius, xy[1] + self.radius, self.radius,
-            self.color[0], self.color[1], self.color[2], self.color[3]
+            self.color.red, self.color.green, self.color.blue, self.color.alpha
         )

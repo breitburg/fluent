@@ -1,7 +1,7 @@
-from rocket.widget.core import Widget
-from rocket.widget.shapes import String, OutlineCircle
+from rocket.widget import Widget, color, align
+from rocket.widget.shapes import FilledBox
 from rocket.launch import launch
-from rocket.widget.layout import Overlay, Padding, Align
+from rocket.widget.layout import Overlay, Padding, align
 from reloadr import autoreload
 
 
@@ -9,10 +9,8 @@ from reloadr import autoreload
 class MyApp(Widget):
     def build(self):
         return Padding(
-            child=Overlay(
-                top=String('Hacking'),
-                bottom=OutlineCircle(radius=100, color=(255, 255, 255, 255)),
-                align=(Align.center, Align.center)
+            child=FilledBox(
+                size=(20, 20)
             ),
             value=20
         )

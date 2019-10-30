@@ -1,9 +1,9 @@
 from rocket.widget.core import GenericWidget
-from rocket.widget.layout import Align
+from rocket.widget.layout import align
 
 
 class Overlay(GenericWidget):
-    def __init__(self, bottom, top, align=(Align.top, Align.left)):
+    def __init__(self, bottom, top, align=(align.top, align.left)):
         self.bottom = bottom
         self.top = top
         self.align = align
