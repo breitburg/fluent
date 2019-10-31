@@ -1,5 +1,5 @@
 from rocket.widget import Widget, color, align
-from rocket.widget.shapes import FilledBox
+from rocket.widget.shape import FilledBox
 from rocket.launch import launch
 from rocket.widget.layout import Overlay, Padding, align
 from reloadr import autoreload
