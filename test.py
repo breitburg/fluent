@@ -1,19 +1,22 @@
-from rocket.widget import Widget, color, align
-from rocket.widget.shape import FilledBox
 from rocket.launch import launch
-from rocket.widget.layout import Overlay, Padding, align
-from reloadr import autoreload
+from rocket.widget.shape import FilledBox
+from rocket.widget.layout import Overlay, Column, Row
+from rocket.widget import Widget, color, align
 
 
-@autoreload
-class MyApp(Widget):
+class MyOwnApp (Widget):
     def build(self):
-        return Padding(
-            child=FilledBox(
-                size=(20, 20)
+        return Row(
+            children=(
+                FilledBox(
+                    size=(100, 100)
+                ),
+                FilledBox(
+                    size=(200, 200)
+                )
             ),
-            value=20
+            spacing=0
         )
 
 
-launch(MyApp())
+launch(MyOwnApp())
