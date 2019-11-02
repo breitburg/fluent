@@ -1,21 +1,25 @@
 from rocket.launch import launch
-from rocket.widget.shape import FilledBox
-from rocket.widget.layout import Overlay, Column, Row
-from rocket.widget import Widget, color, align
+from rocket.missile import Scaffold, AppBar
+from rocket.widget.shape import FilledBox, String
+from rocket.widget.layout import Column
+from rocket.widget import Widget, color
+from reloadr import autoreload
 
 
+@autoreload
 class MyOwnApp (Widget):
     def build(self):
-        return Row(
-            children=(
-                FilledBox(
-                    size=(100, 100)
-                ),
-                FilledBox(
-                    size=(200, 200)
+        return Scaffold(
+            app_bar=AppBar(
+                child=String(
+                    text='Hello'
                 )
             ),
-            spacing=0
+            body=Column(
+                children=(
+                    FilledBox(size=(100, 100), color=color.red),
+                )
+            )
         )
 
 
