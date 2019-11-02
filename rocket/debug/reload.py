@@ -1,7 +1,5 @@
 from reloadr import ClassReloadr, get_new_source
 from inspect import getmodule
-from traceback import print_exc
-from random import choice
 from time import time
 
 
@@ -17,7 +15,6 @@ def reload_class(target):
         exec(source, module.__dict__, locals_)
     except Exception as exception:
         print(f'⚠️ Hot reload was rejected: {exception.args[0]}')
-        # print_exc()
         return target
 
     print(f'🤘 Reloaded in {round((time() - start_time) * 1000, 3)}ms')

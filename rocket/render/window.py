@@ -11,6 +11,6 @@ class Window(SDL_Window):
         self.events = get_events()  # Updating events
 
         self.renderer.present()  # Presenting renderer
-        self.renderer.clear((0, 0, 0, 255))  # Clearing renderer
+        self.renderer.clear(color=(0, 0, 0, 255))  # Clearing renderer
 
         self.refresh()  # Refreshing window
