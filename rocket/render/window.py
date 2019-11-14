@@ -1,4 +1,5 @@
 from sdl2.ext import Renderer as SDL_Renderer, Window as SDL_Window, get_events
+from sdl2.events import SDL_MOUSEBUTTONDOWN, SDL_QUIT
 
 
 class Window(SDL_Window):
@@ -8,7 +9,12 @@ class Window(SDL_Window):
         self.events = list()  # Events list
 
     def update(self):
-        self.events = get_events()  # Updating events
+        self.events.clear()
+        for event in get_events():
+            if event.type == SDL_MOUSEBUTTONDOWN:
+                self.events.append((event.button.x, event.button.y))
+            elif event.type == SDL_QUIT:
+                quit()
 
         self.renderer.present()  # Presenting renderer
         self.renderer.clear(color=(0, 0, 0, 255))  # Clearing renderer

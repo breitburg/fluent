@@ -1,28 +1,33 @@
 from rocket.launch import launch
-from rocket.missile import Scaffold, AppBar, Button
-from rocket.widget.shape import FilledBox, String
-from rocket.widget.layout import Column
 from rocket.widget import Widget, color
-from rocket.debug import debug
+from rocket.widget.layout import Row, Padding
+from rocket.widget.shape import FilledBox
 
 
-@debug
-class MyOwnApp (Widget):
+class MyWid(Widget):
     def build(self):
-        return Scaffold(
-            app_bar=AppBar(
-                child=String(
-                    text='Well done'
-                )
-            ),
-            body=Column(
+        return Padding(
+            child=Row(
                 children=(
-                    Button(child=FilledBox(
-                        size=(100, 30)
-                    )),
-                )
-            )
+                    FilledBox(
+                        size=(10, 10),
+                        color=color.red
+                    ),
+                    FilledBox(
+                        size=(10, 10),
+                        color=color.green
+                    ),
+                    FilledBox(
+                        size=(10, 10),
+                        color=color.blue
+                    )
+                ),
+                spacing=20
+            ),
+            value=20
         )
 
 
-launch(MyOwnApp())
+launch(
+    MyWid()
+)
