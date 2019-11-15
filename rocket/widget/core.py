@@ -1,5 +1,4 @@
 from rocket.render import window
-from sdl2.rect import SDL_Rect
 
 
 class Widget:
@@ -16,9 +15,13 @@ class Widget:
     def render(self, xy):
         self.__update_instance__()
         self.__instance__.render(xy=xy)
+
+        widget_size = self.size
         for touch in window.events:
-            if SDL_Rect(xy[0], xy[1], self.size[0], self.size[1]).collidepoint(touch) and self.pressed is not None:
-                print('Touched')
+            if xy[0] + widget_size[0] > touch[0] > xy[0] and \
+                    xy[1] + widget_size[1] > touch[1] > xy[1] and \
+                    self.__pressed__:
+                self.__pressed__(self)
 
     @property
     def size(self):

@@ -1,33 +1,14 @@
-from rocket.launch import launch
-from rocket.widget import Widget, color
-from rocket.widget.layout import Row, Padding
-from rocket.widget.shape import FilledBox
+from rocket.material import *
 
 
-class MyWid(Widget):
-    def build(self):
-        return Padding(
-            child=Row(
-                children=(
-                    FilledBox(
-                        size=(10, 10),
-                        color=color.red
-                    ),
-                    FilledBox(
-                        size=(10, 10),
-                        color=color.green
-                    ),
-                    FilledBox(
-                        size=(10, 10),
-                        color=color.blue
-                    )
-                ),
-                spacing=20
-            ),
-            value=20
-        )
-
+def on_button_pressed(button):
+    print(f'{button} was pressed')
 
 launch(
-    MyWid()
+    Button(
+        child=Text(
+            text='Hello'
+        ),
+        pressed=on_button_pressed
+    )
 )

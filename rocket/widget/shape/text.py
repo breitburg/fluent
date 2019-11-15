@@ -2,13 +2,13 @@ from rocket.render import stringRGBA, window
 from rocket.widget import GenericWidget, color
 
 
-class String(GenericWidget):
+class Text(GenericWidget):
     def __init__(self, text, color=color.white):
         self.text = text
         self.color = color
         # TODO: Add text size calculation
 
-        super(String, self).__init__(size=(0, 0))
+        super(Text, self).__init__(size=(100, 100))
 
     def render(self, xy):
         stringRGBA(

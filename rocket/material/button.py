@@ -4,7 +4,7 @@ from rocket.widget.layout import Overlay
 
 
 class Button(Widget):
-    def __init__(self, child, color=color.black, pressed=None):
+    def __init__(self, child, color=color.blue, pressed=None):
         self.child = child
         self.color = color
         super(Button, self).__init__(pressed=pressed)
