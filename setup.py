@@ -15,7 +15,8 @@ setup(
     ],
     install_requires=[
         'pysdl2',
-        'reloadr'
+        'reloadr',
+        'pyyaml'
     ],
     entry_points={
         'console_scripts': ['rocket=rocket.tool:command'],

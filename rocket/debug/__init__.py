@@ -1,1 +1,1 @@
-from rocket.debug.debug import debug
+from rocket.debug.reload import auto_reload
