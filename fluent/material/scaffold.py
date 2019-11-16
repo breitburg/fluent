@@ -1,7 +1,7 @@
-from rocket.widget import Widget, color
-from rocket.widget.layout import Column, Overlay
-from rocket.widget.shape import FilledBox
-from rocket.render import window
+from fluent.widget import Widget, color
+from fluent.widget.layout import Column, Overlay
+from fluent.widget.shape import FilledBox
+from fluent.render import window
 
 
 class Scaffold(Widget):

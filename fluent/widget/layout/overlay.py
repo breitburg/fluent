@@ -1,5 +1,5 @@
-from rocket.widget.core import GenericWidget
-from rocket.widget.layout import align
+from fluent.widget.core import GenericWidget
+from fluent.widget.layout import align
 
 
 class Overlay(GenericWidget):

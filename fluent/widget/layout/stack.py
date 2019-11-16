@@ -1,4 +1,4 @@
-from rocket.widget import GenericWidget
+from fluent.widget import GenericWidget
 
 
 class Stack(GenericWidget):

@@ -1,5 +1,5 @@
-from rocket.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window
-from rocket.widget import GenericWidget, color
+from fluent.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window
+from fluent.widget import GenericWidget, color
 
 
 class FilledCircle(GenericWidget):

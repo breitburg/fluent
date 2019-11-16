@@ -1,5 +1,5 @@
-from rocket.render import stringRGBA, window
-from rocket.widget import GenericWidget, color
+from fluent.render import stringRGBA, window
+from fluent.widget import GenericWidget, color
 
 
 class Text(GenericWidget):

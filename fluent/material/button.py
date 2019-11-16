@@ -1,6 +1,6 @@
-from rocket.widget import Widget, color, align
-from rocket.widget.shape import FilledRoundedBox
-from rocket.widget.layout import Overlay
+from fluent.widget import Widget, color, align
+from fluent.widget.shape import FilledRoundedBox
+from fluent.widget.layout import Overlay
 
 
 class Button(Widget):

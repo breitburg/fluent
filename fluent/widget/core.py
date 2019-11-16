@@ -1,4 +1,4 @@
-from rocket.render import window
+from fluent.render import window
 
 
 class Widget:

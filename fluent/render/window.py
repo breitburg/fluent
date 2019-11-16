@@ -3,7 +3,7 @@ from sdl2.events import SDL_MOUSEBUTTONDOWN, SDL_QUIT
 
 
 class Window(SDL_Window):
-    def __init__(self, title='Rocket Window', size=(640, 480)):
+    def __init__(self, title='Fluent Window', size=(640, 480)):
         super(Window, self).__init__(title=title, size=size)
         self.renderer = SDL_Renderer(target=self)  # Initializing renderer instance
         self.events = list()  # Events list

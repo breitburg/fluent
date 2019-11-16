@@ -1,6 +1,6 @@
-from rocket.render import boxRGBA, roundedBoxRGBA, \
+from fluent.render import boxRGBA, roundedBoxRGBA, \
     rectangleRGBA, roundedRectangleRGBA, window
-from rocket.widget import GenericWidget, color
+from fluent.widget import GenericWidget, color
 
 
 class FilledBox(GenericWidget):

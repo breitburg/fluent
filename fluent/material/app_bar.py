@@ -1,7 +1,7 @@
-from rocket.widget import Widget, color, align
-from rocket.widget.layout import Overlay, Padding
-from rocket.widget.shape import FilledBox
-from rocket.render import window
+from fluent.widget import Widget, color, align
+from fluent.widget.layout import Overlay, Padding
+from fluent.widget.shape import FilledBox
+from fluent.render import window
 
 
 class AppBar(Widget):

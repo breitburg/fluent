@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
-from rocket import __version__
+from fluent import __version__
 
 setup(
-    name='rocket',
+    name='fluent',
     version=__version__,
     author='Breitburg',
     include_package_data=True,
-    url='https://github.com/breitburg/rocket',
+    url='https://github.com/libfluent/fluent',
     packages=find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
@@ -19,6 +19,6 @@ setup(
         'pyyaml'
     ],
     entry_points={
-        'console_scripts': ['rocket=rocket.tool:command'],
+        'console_scripts': ['fluent=fluent.tool:command'],
     }
 )

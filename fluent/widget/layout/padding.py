@@ -1,4 +1,4 @@
-from rocket.widget.core import GenericWidget
+from fluent.widget.core import GenericWidget
 
 
 class Padding(GenericWidget):
