@@ -1,5 +1,6 @@
-<p align="center"><img src="https://imgur.com/download/cRa9Nhb/"/></p>
-<p align="center">Powerful mobile development framework (Inspired by Flutter)</p>
+# Rocket
+
+Powerful mobile development framework (Inspired by Flutter)
 
 ## Getting Started
 
@@ -17,3 +18,16 @@ This command will create an empty project with codebase.
 1. You need to compile and install `sdl2-gfx` library for rendering advanced primitive shapes.
 2. Must be installed `pysdl2` library
 3. Library `reloadr` must be installed for hot reloading
+
+## Plans and Issues
+
+- Add text size calculation
+- Add automatically enabling hot reload when it's opened with `--debug` tag
+- Implement new material widgets
+- Write full documentation
+- Add hot reload execution error screen
+- Add build instructions
+- Add unit tests
+- Implement `rocket doctor` command
+- Add animations methods
+- Add scaling ability
