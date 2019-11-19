@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from fluent import __version__
 
 setup(
-    name='fluent',
+    name='libfluent',
     version=__version__,
     author='Breitburg',
     include_package_data=True,
