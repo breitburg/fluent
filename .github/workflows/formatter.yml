@@ -1,0 +1,12 @@
+name: Black Code Formatter
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Black Code Formatter
+      uses: lgeiger/black-action@v1.0.1
