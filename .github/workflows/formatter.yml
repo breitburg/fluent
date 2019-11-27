@@ -1,4 +1,4 @@
-name: Black Code Formatter
+name: Code Formatter
 
 on: [push]
 
@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Black Code Formatter
-      uses: lgeiger/black-action@v1.0.1
+    - name: Python Style Checker
+      uses: andymckay/pycodestyle-action@0.1.3
