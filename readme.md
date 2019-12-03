@@ -16,15 +16,15 @@ List of the most featured features 🧐
 
 The simplest installation way is using `pip`. You can install the latest stable release by executing following command:
 ```console
-$ pip install https://github.com/libfluent/fluent/archive/stable.zip
+$ pip install libfluent
 ```
 
 Also, you need to have `sdl2-gfx` library. You can download it [here](http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip). Unpack that, and execute following commands to compile and install the library:
 
 ```console
-./configure
-make
-make install
+$ ./configure
+$ make
+$ make install
 ```
 
 After installation you can try to check running version by executing following command:
@@ -32,15 +32,6 @@ After installation you can try to check running version by executing following c
 ```console
 $ fluent version
 🚀 Fluent, version 0.0.2
-```
-
-## Getting Started
-
-First of all you need to create a empty project. Use command line util to perform that:
-
-```console
-$ fluent new first_app
-💫 Creating new project... (first_app)
 ```
 
 This command will create an empty project with codebase.
@@ -55,4 +46,3 @@ This command will create an empty project with codebase.
 
 - No ability to set fonts
 - Text widget size is zero
-- No ability to get parent of widget
