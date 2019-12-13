@@ -5,6 +5,10 @@ class Color:
         self.blue = blue
         self.alpha = alpha
 
+    @property
+    def tuple(self):
+        return self.red, self.green, self.blue, self.alpha
+
 
 red = Color(red=255)
 green = Color(green=255)
