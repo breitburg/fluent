@@ -1,6 +1,6 @@
 from fluent.render import boxRGBA, roundedBoxRGBA, \
-    rectangleRGBA, roundedRectangleRGBA, window
-from fluent.widget import GenericWidget, color
+    rectangleRGBA, roundedRectangleRGBA, window, color
+from fluent.widget import GenericWidget
 
 
 class FilledBox(GenericWidget):

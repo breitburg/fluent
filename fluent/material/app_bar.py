@@ -1,7 +1,7 @@
-from fluent.widget import Widget, color, align
+from fluent.widget import Widget, align
 from fluent.widget.layout import Overlay, Padding
 from fluent.widget.shape import FilledBox
-from fluent.render import window
+from fluent.render import window, color
 
 
 class AppBar(Widget):

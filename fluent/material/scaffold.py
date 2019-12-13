@@ -1,7 +1,7 @@
-from fluent.widget import Widget, color
+from fluent.widget import Widget
 from fluent.widget.layout import Column, Overlay
 from fluent.widget.shape import FilledBox
-from fluent.render import window
+from fluent.render import window, color
 
 
 class Scaffold(Widget):

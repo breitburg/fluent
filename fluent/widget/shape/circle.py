@@ -1,5 +1,5 @@
-from fluent.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window
-from fluent.widget import GenericWidget, color
+from fluent.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window, color
+from fluent.widget import GenericWidget
 
 
 class FilledCircle(GenericWidget):

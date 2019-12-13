@@ -5,6 +5,5 @@
 - Add hot reload execution error screen
 - Add build instructions
 - Add unit tests
-- Implement `fluent doctor` command
 - Add animations methods
 - Add scaling ability

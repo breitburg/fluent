@@ -1,9 +1,10 @@
-from fluent.render import window, manager
-from fluent.widget import GenericWidget, color
+from fluent.render import window, manager, color
+from fluent.render.font import weight
+from fluent.widget import GenericWidget
 
 
 class Text(GenericWidget):
-    def __init__(self, text, color=color.black, size=16, weight='regular'):
+    def __init__(self, text, color=color.black, size=16, weight=weight.regular):
         self.text = text
         self.color = color
         self.weight = weight

@@ -11,3 +11,9 @@ for font in ['bold_italic.ttf', 'extra_bold.ttf',
              'light_italic.ttf', 'regular.ttf', 'semi_bold.ttf',
              'semi_bold_italic.ttf']:
     manager.add(font_path=join(path, font), size=14)
+
+
+class weight:
+    regular = 'regular'
+    bold = 'bold'
+    italic = 'italic'

@@ -1,4 +1,5 @@
-from fluent.widget import Widget, color, align
+from fluent.widget import Widget, align
+from fluent.render import color
 from fluent.widget.shape import FilledRoundedBox
 from fluent.widget.layout import Overlay
 

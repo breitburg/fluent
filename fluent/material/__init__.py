@@ -7,4 +7,5 @@ from fluent.widget.shape import *
 from fluent.widget.layout import *
 from fluent.launch import launch
 
-from fluent.widget import color
+from fluent.render import color
+from fluent.render.font import weight
