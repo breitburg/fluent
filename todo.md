@@ -1,6 +1,5 @@
 ## Plans and Issues
 
-- Add text size calculation
 - Implement new material widgets
 - Write full documentation
 - Add hot reload execution error screen
