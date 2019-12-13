@@ -6,6 +6,7 @@ from fluent.widget import GenericWidget
 class FilledBox(GenericWidget):
     def __init__(self, size, color=color.white):
         self.color = color
+
         super(FilledBox, self).__init__(size=size)
 
     def render(self, xy):

@@ -6,6 +6,7 @@ class Stack(GenericWidget):
         self.children = children
         self.spacing = spacing
         self.__coordinate__ = coordinate
+
         super(Stack, self).__init__(size=self.calculate_size())
 
     def calculate_size(self):

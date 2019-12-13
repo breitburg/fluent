@@ -8,6 +8,7 @@ class Scaffold(Widget):
     def __init__(self, app_bar, body):
         self.app_bar = app_bar
         self.body = body
+        
         super(Scaffold, self).__init__()
 
     def build(self):

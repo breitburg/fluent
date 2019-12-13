@@ -7,6 +7,7 @@ class Overlay(GenericWidget):
         self.bottom = bottom
         self.top = top
         self.align = align
+
         super(Overlay, self).__init__(size=self.bottom.size)
 
     def render(self, xy):

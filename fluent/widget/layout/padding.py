@@ -5,6 +5,7 @@ class Padding(GenericWidget):
     def __init__(self, child, value):
         self.value = value
         self.child = child
+
         super(Padding, self).__init__(
             size=(self.child.size[0] + self.value * 2, self.child.size[1] + self.value * 2)
         )
