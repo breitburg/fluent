@@ -19,7 +19,7 @@ The simplest installation way is using `pip`. You can install the latest stable 
 $ pip install libfluent
 ```
 
-Also, you need to have `sdl2-gfx` library. You can download it [here](http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip). Unpack that, and execute following commands to compile and install the library:
+Also, you need to have `sdl2-gfx` and `sdl2-ttf` library. You can download it [here](http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip) and [here](https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.15.zip). Unpack that, and execute following commands to compile and install the library:
 
 ```console
 $ ./configure
@@ -34,15 +34,8 @@ $ fluent version
 🚀 Fluent, version 0.0.2
 ```
 
-This command will create an empty project with codebase.
-
 ## Requirements
 
 1. You need to compile and install `sdl2-gfx` library for rendering advanced primitive shapes
 2. Must be installed `pysdl2` library
 3. Library `reloadr` must be installed for hot reloading
-
-## Issues
-
-- No ability to set fonts
-- Text widget size is zero
