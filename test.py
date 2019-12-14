@@ -3,32 +3,42 @@ from fluent.debug import auto_reload
 
 
 @auto_reload
-class MyApp(Widget):
-    text = 'Hello'
+class Pupkin(Widget):
+    user_number = 0
 
     def build(self):
         return Scaffold(
             app_bar=AppBar(
-                child=Text('Hello, world', color=color.white),
-                color=color.red
+                child=Text('Counter', color=color.white, size=30)
             ),
             body=Padding(
-                child=Row(
+                child=Column(
                     children=(
-                        Button(
-                            child=Text('Press here', color=color.white),
-                            color=color.black,
-                            pressed=self.on_button_pressed
-                        ),
-                        Text(self.text)
+                        Text(f'Your number: {self.user_number}', weight=weight.bold),
+                        Row(
+                            children=(
+                                Button(
+                                    child=Text('<<', color=color.green),
+                                    color=color.black, pressed=self.on_left_click
+
+                                ),
+                                Button(
+                                    child=Text('>>', color=color.green),
+                                    color=color.black, pressed=self.on_right_click
+                                )
+                            )
+                        )
                     )
                 ),
                 value=10
             )
         )
 
-    def on_button_pressed(self, button):
-        self.text += ' world'
+    def on_left_click(self, widget):
+        self.user_number -= 1
+
+    def on_right_click(self, widget):
+        self.user_number += 1
 
 
-launch(MyApp())
+launch(target=Pupkin())
