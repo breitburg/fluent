@@ -1,4 +1,4 @@
-# Fluent
+# Fluent ![](https://img.shields.io/pypi/v/libfluent?label=version)
 
 Powerful mobile & desktop app development kit (Inspired by Flutter)
 
