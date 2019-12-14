@@ -13,7 +13,7 @@ class FilledBox(GenericWidget):
         boxRGBA(
             window.renderer.sdlrenderer,
             xy[0], xy[1], xy[0] + self.size[0], xy[1] + self.size[1],
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )
 
 
@@ -27,7 +27,7 @@ class FilledRoundedBox(GenericWidget):
         roundedBoxRGBA(
             window.renderer.sdlrenderer,
             xy[0], xy[1], xy[0] + self.size[0], xy[1] + self.size[1], self.radius,
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )
 
 
@@ -40,7 +40,7 @@ class OutlineBox(GenericWidget):
         rectangleRGBA(
             window.renderer.sdlrenderer,
             xy[0], xy[1], xy[0] + self.size[0], xy[1] + self.size[1],
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )
 
 
@@ -54,5 +54,5 @@ class OutlineRoundedBox(GenericWidget):
         roundedRectangleRGBA(
             window.renderer.sdlrenderer,
             xy[0], xy[1], xy[0] + self.size[0], xy[1] + self.size[1], self.radius,
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )

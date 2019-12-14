@@ -16,7 +16,7 @@ class Text(GenericWidget):
     def render(self, xy):
         manager.size = self.font_size
         manager.default_font = self.weight
-        manager.color = self.color.tuple
+        manager.color = self.color
 
         self.texture = window.factory.from_text(self.text, fontmanager=manager)
         window.renderer.copy(self.texture, dstrect=(xy[0], xy[1], self.texture.size[0], self.texture.size[1]))

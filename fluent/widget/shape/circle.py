@@ -13,7 +13,7 @@ class FilledCircle(GenericWidget):
         filledCircleRGBA(
             window.renderer.sdlrenderer,
             xy[0] + self.radius, xy[1] + self.radius, self.radius,
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )
 
 
@@ -30,5 +30,5 @@ class OutlineCircle(GenericWidget):
         method(
             window.renderer.sdlrenderer,
             xy[0] + self.radius, xy[1] + self.radius, self.radius,
-            self.color.red, self.color.green, self.color.blue, self.color.alpha
+            self.color[0], self.color[1], self.color[2], self.color[3]
         )

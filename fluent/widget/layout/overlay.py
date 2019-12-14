@@ -1,5 +1,5 @@
 from fluent.widget.core import GenericWidget
-from fluent.widget.layout import align
+from fluent.render import align
 
 
 class Overlay(GenericWidget):
