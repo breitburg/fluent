@@ -3,34 +3,34 @@ from fluent.render import window
 
 class Widget:
     def __init__(self, pressed=None):
-        self.__pressed__ = pressed
-        self.__update_instance__()
+        self._pressed = pressed
+        self._update_instance()
 
     def build(self):
         return NotImplemented
 
-    def __update_instance__(self):
-        self.__instance__ = self.build()
+    def _update_instance(self):
+        self._instance = self.build()
 
     def render(self, xy):
-        self.__update_instance__()
-        self.__instance__.render(xy=xy)
+        self._update_instance()
+        self._instance.render(xy=xy)
 
         widget_size = self.size
         for touch in window.events:
             if xy[0] + widget_size[0] > touch[0] > xy[0] and \
                     xy[1] + widget_size[1] > touch[1] > xy[1] and \
-                    self.__pressed__:
-                self.__pressed__(self)
+                    self._pressed:
+                self._pressed(self)
 
     @property
     def size(self):
-        return self.__instance__.size
+        return self._instance.size
 
 
 class GenericWidget(Widget):
     def __init__(self, size):
-        self.__size__ = size
+        self._size = size
         super(GenericWidget, self).__init__()
 
     def build(self):
@@ -38,4 +38,4 @@ class GenericWidget(Widget):
 
     @property
     def size(self):
-        return self.__size__
+        return self._size

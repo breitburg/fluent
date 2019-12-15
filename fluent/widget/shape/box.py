@@ -21,6 +21,7 @@ class FilledRoundedBox(GenericWidget):
     def __init__(self, size, color=color.white, radius=10):
         self.color = color
         self.radius = radius
+
         super(FilledRoundedBox, self).__init__(size=size)
 
     def render(self, xy):
@@ -34,6 +35,7 @@ class FilledRoundedBox(GenericWidget):
 class OutlineBox(GenericWidget):
     def __init__(self, size, color=color.white):
         self.color = color
+
         super(OutlineBox, self).__init__(size=size)
 
     def render(self, xy):
@@ -48,6 +50,7 @@ class OutlineRoundedBox(GenericWidget):
     def __init__(self, size, color=color.white, radius=10):
         self.color = color
         self.radius = radius
+
         super(OutlineRoundedBox, self).__init__(size=size)
 
     def render(self, xy):
