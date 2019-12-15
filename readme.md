@@ -1,20 +1,42 @@
 # Fluent ![](https://img.shields.io/pypi/v/libfluent?label=version)
 
-Powerful mobile & desktop app development kit (Inspired by Flutter)
+Simple and powerful multi-platform development framework.
+
+## Example
+
+Here is the basic *Hello, world* code example:
+
+```python
+from fluent.material import *  # Importing library
+
+
+# Calling launch method
+launch(
+    # Setting target to Text widget
+    target=Text(
+        text='Hello, Fluent',  # Setting text to the widget
+        color=color.white  # Setting color to the widget
+    )  # Text
+)  # launch
+```
+
+Execution result:
+
+![](https://imgur.com/download/AahLtit/)
 
 ## Features
 
-List of the most featured features 🧐
+Here is the most featured features:
 
-- All is a widget paradigm 
 - Hot reload
-- Support multiple platforms
-- Pure Python
-- Super-simple
+- Platform independent
+- Easy-to-use
+- All is a widget concept
 
 ## Installation
 
 The simplest installation way is using `pip`. You can install the latest stable release by executing following command:
+
 ```console
 $ pip install libfluent
 ```
@@ -27,15 +49,19 @@ $ make
 $ make install
 ```
 
+Or, in the latest release we added automated installation script that installs the latest version from our repository and installs all SDL additional packages. Execute that using:
+
+```console
+$ sh bin/install.sh
+```
+
 After installation you can try to check running version by executing following command:
 
 ```console
 $ fluent version
-🚀 Fluent, version 0.0.2
+🚀 Fluent, version 1.0.0-beta1
 ```
 
 ## Requirements
 
-1. You need to compile and install `sdl2-gfx` library for rendering advanced primitive shapes
-2. Must be installed `pysdl2` library
-3. Library `reloadr` must be installed for hot reloading
+You need to compile and install `sdl2-gfx` and `sdl2-ttf` libraries for rendering advanced primitive shapes.
