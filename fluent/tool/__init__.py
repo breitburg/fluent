@@ -11,7 +11,7 @@ def command():
         print('❌ No command was specified\n'
               '→ Type help to get list of commands')
     elif arguments[0] == 'version':
-        print(f'🚀 Fluent, version {__version__}\n⚡️ Checking for updates unavailable')
+        print(f'🚀 Fluent, version {__version__}')
     elif arguments[0] == 'doctor':
         try:
             from sdl2 import sdlttf, sdlgfx

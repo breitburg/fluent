@@ -1,7 +1,8 @@
 ![](https://imgur.com/download/6hKZqiN/)
-# Fluent ![](https://img.shields.io/pypi/v/libfluent?label=version)
 
-Simple and powerful multi-platform development framework.
+![](https://img.shields.io/pypi/v/libfluent?label=version)
+
+**Fluent** – Simple and powerful multi-platform development framework.
 
 ## Example
 

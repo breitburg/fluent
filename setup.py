@@ -14,8 +14,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     install_requires=[
-        'pysdl2',
-        'reloadr',
+        'pysdl2', 'reloadr',
         'pyyaml'
     ],
     entry_points={
