@@ -16,6 +16,9 @@ class Widget:
     size : tuple
         the current widget size
 
+    parent : Widget
+        the parent widget of self
+
     Methods
     -------
     build() : Widget
@@ -23,15 +26,15 @@ class Widget:
     """
 
     def __init__(self, pressed=None):
-        self._pressed = pressed  # On widget pressed function binding
-        self._update_instance()  # Updating build instance
+        self._pressed = pressed  # On widget pressed function bindings
+        self.parent = self  # Adding parent property
 
     def build(self):  # Method that will return a widget
         return NotImplemented
 
     def _update_instance(self):
         self._instance = self.build()  # Creating the build instance
-        self._instance.parent = self  # Setting parent to the builded instance
+        self._instance.parent = self.parent  # Setting parent to the builded instance
 
     def render(self, xy):
         self._update_instance()  # Updating instance

@@ -1,7 +1,9 @@
 from fluent.render import window
+from fluent.widget.layout import Screen
 
 
 def launch(target):  # App launching function
+    target = Screen(child=target)  # Adding parent widget
     window.show()  # Showing window
 
     while True:
