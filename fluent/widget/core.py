@@ -1,5 +1,4 @@
 from fluent.render import window
-from time import sleep
 
 
 class Widget:
@@ -28,7 +27,7 @@ class Widget:
 
     def __init__(self, pressed=None):
         self._pressed = pressed  # On widget pressed function bindings
-        self.parent = None  # Adding parent property
+        self.parent = self  # Adding dummy parent property
 
     def build(self):  # Method that will return a widget
         return NotImplemented
@@ -78,6 +77,7 @@ class GenericWidget(Widget):
 
     def __init__(self, size):
         self._size = size  # Setting widget size
+
         super(GenericWidget, self).__init__()
 
     def build(self):

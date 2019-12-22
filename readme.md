@@ -7,7 +7,7 @@
 Here is the basic *Hello, world* code example:
 
 ```python
-from fluent.material import *  # Importing library
+from fluent.essentials import *  # Importing library
 
 
 # Calling launch method

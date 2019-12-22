@@ -1,4 +1,4 @@
-from fluent.material import *  # Importing library
+from fluent.essentials import *  # Importing library
 from fluent.debug import auto_reload
 
 
