@@ -14,8 +14,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     install_requires=[
-        'pysdl2', 'reloadr',
-        'pyyaml'
+        'pysdl2', 'reloadr', 'pyyaml'
     ],
     entry_points={
         'console_scripts': ['fluent=fluent.tool:command'],

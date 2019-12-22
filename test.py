@@ -1,15 +1,13 @@
 from fluent.material import *  # Importing library
-from fluent.widget.animation.slide import Slide
 
+class NewButton(Widget):
+    def build(self):
+        return FilledBox(size=(100, 100), color=color.white)
 
-# Calling launch method
+class App(Widget):
+    def build(self):
+        return NewButton()
+
 launch(
-    # Setting target to Text widget
-    target=Slide(
-        child=Text(
-            text='Hello, Fluent',  # Setting text to the widget
-            color=color.white  # Setting color to the widget
-        ),
-        offset=10000
-    )  # Text
-)  # launch
+    target=App()
+)
