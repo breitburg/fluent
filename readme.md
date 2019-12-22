@@ -20,10 +20,6 @@ launch(
 )  # launch
 ```
 
-Execution result:
-
-![](https://imgur.com/download/AahLtit/)
-
 ## Features
 
 Here is the most featured features:
@@ -53,13 +49,6 @@ Or, in the latest release we added automated installation script that installs t
 
 ```console
 $ sh bin/install.sh
-```
-
-After installation you can try to check running version by executing following command:
-
-```console
-$ fluent version
-🚀 Fluent, version 1.0.0-beta1
 ```
 
 ## Requirements

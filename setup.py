@@ -15,8 +15,5 @@ setup(
     ],
     install_requires=[
         'pysdl2', 'reloadr', 'pyyaml'
-    ],
-    entry_points={
-        'console_scripts': ['fluent=fluent.tool:command'],
-    }
+    ]
 )
