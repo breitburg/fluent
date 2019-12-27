@@ -1,24 +1,9 @@
-from fluent.essentials import *  # Importing library
-from fluent.debug import auto_reload
+from fluent.essential import *  # Importing library
 
 
-@auto_reload
-class MyApp(Widget):
+class MyOwnWidget(Widget):
     def build(self):
-        return First()
+        return Text(text='Hello, world', color=color.white)
 
 
-@auto_reload
-class First(Widget):
-    def build(self):
-        return Second()
-
-
-@auto_reload
-class Second(Widget):
-    def build(self):
-        print(self.parent)
-        return FilledBox(size=(100, 20), color=color.white)
-
-
-launch(target=MyApp())
+launch(target=MyOwnWidget())

@@ -2,6 +2,17 @@ from fluent.widget.core import GenericWidget
 
 
 class Padding(GenericWidget):
+    """A class used to represent an padding
+
+    Parameters
+    ----------
+    child : Widget
+        child that we will apply padding
+
+    value : int
+        amount of padding we apply to child
+    """
+
     def __init__(self, child, value):
         self.value = value
         self.child = child

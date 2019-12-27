@@ -3,6 +3,17 @@ from fluent.widget import GenericWidget
 
 
 class FilledCircle(GenericWidget):
+    """A class used to represent an circle
+
+    Parameters
+    ----------
+    radius : int
+        radius that will be using to draw
+
+    color : tuple, optional
+        color that will be using to draw
+    """
+
     def __init__(self, radius, color=color.white):
         self.radius = radius
         self.color = color
@@ -18,6 +29,20 @@ class FilledCircle(GenericWidget):
 
 
 class OutlineCircle(GenericWidget):
+    """A class used to represent an circle
+
+    Parameters
+    ----------
+    radius : int
+        radius that will be using to draw
+
+    color : tuple, optional
+        color that will be using to draw
+
+    anti_aliasing : bool, optional
+        apply anti-aliasing to the circle
+    """
+
     def __init__(self, radius, color=color.white, anti_aliasing=True):
         self.radius = radius
         self.color = color

@@ -3,6 +3,17 @@ from fluent.render import align
 
 
 class Align(GenericWidget):
+    """A class used to represent an align
+
+    Parameters
+    ----------
+    child : Widget
+        child that we will align
+
+    align : tuple, optional
+        setting align properties
+    """
+
     def __init__(self, child, align=(align.top, align.left)):
         self.child = child
         self.align = align
@@ -28,5 +39,13 @@ class Align(GenericWidget):
 
 
 class Center(Align):
+    """A class used to represent an center widget
+
+    Parameters
+    ----------
+    child : Widget
+        child that we will center
+    """
+
     def __init__(self, child):
         super(Center, self).__init__(child=child, align=(align.center, align.center))

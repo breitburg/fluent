@@ -1,8 +1,18 @@
 from fluent.widget.core import GenericWidget
-from fluent.render import align
 
 
 class Overlay(GenericWidget):
+    """A class used to represent an overlay
+
+    Parameters
+    ----------
+    top : Widget
+        top widget in the overlay
+
+    bottom : Widget
+        bottom widget in the overlay
+    """
+
     def __init__(self, bottom, top):
         self.bottom = bottom
 

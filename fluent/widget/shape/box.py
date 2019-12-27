@@ -4,6 +4,17 @@ from fluent.widget import GenericWidget
 
 
 class FilledBox(GenericWidget):
+    """A class used to represent an filled box (rectangle)
+
+    Parameters
+    ----------
+    size : tuple
+        represents size of the box
+
+    color : tuple, optional
+        color that will be using to draw
+    """
+
     def __init__(self, size, color=color.white):
         self.color = color
 
@@ -18,6 +29,20 @@ class FilledBox(GenericWidget):
 
 
 class FilledRoundedBox(GenericWidget):
+    """A class used to represent an filled rounded box (rectangle)
+
+    Parameters
+    ----------
+    size : tuple
+        represents size of the box
+
+    color : tuple, optional
+        color that will be using to draw
+
+    radius : int, optional
+        radius that will be using on corners
+    """
+
     def __init__(self, size, color=color.white, radius=10):
         self.color = color
         self.radius = radius
@@ -33,6 +58,17 @@ class FilledRoundedBox(GenericWidget):
 
 
 class OutlineBox(GenericWidget):
+    """A class used to represent an outline box (rectangle)
+
+    Parameters
+    ----------
+    size : tuple
+        represents size of the box
+
+    color : tuple, optional
+        color that will be using to draw outline
+    """
+
     def __init__(self, size, color=color.white):
         self.color = color
 
@@ -47,6 +83,20 @@ class OutlineBox(GenericWidget):
 
 
 class OutlineRoundedBox(GenericWidget):
+    """A class used to represent an outline rounded box (rectangle)
+
+    Parameters
+    ----------
+    size : tuple
+        represents size of the box
+
+    color : tuple, optional
+        color that will be using to draw
+
+    radius : int, optional
+        radius that will be using on corners
+    """
+
     def __init__(self, size, color=color.white, radius=10):
         self.color = color
         self.radius = radius

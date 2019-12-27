@@ -4,6 +4,23 @@ from fluent.widget import GenericWidget
 
 
 class Text(GenericWidget):
+    """A class used to represent an text
+
+    Parameters
+    ----------
+    text : str
+        text that will be displayed
+
+    color : tuple, optional
+        color that will be using to draw
+
+    size : int, optional
+        size of the text
+
+    weight : str, optional
+        weight of the text
+    """
+
     def __init__(self, text, color=color.black, size=16, weight=weight.regular):
         self.text = text
         self.color = color
