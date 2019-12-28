@@ -1,4 +1,5 @@
 from fluent.render import window
+from logging import debug
 
 
 class Widget:
@@ -27,7 +28,6 @@ class Widget:
 
     def __init__(self, pressed=None):
         self._pressed = pressed  # On widget pressed function bindings
-        self._size = (0, 0)  # Adding dummy widget size
         self.parent = self  # Adding dummy parent property
 
     def build(self):  # Method that will return a widget
@@ -74,8 +74,8 @@ class GenericWidget(Widget):
     """
 
     def __init__(self, size):
-        self._size = [point * window.scale for point in size]  # Setting widget size
-
+        self._size = [int(point * window.scale) for point in size]  # Setting widget size
+        debug(msg=f'{self} -> {self._size}')
         super(GenericWidget, self).__init__()
 
     def build(self):
