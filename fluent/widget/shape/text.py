@@ -1,5 +1,5 @@
 from fluent.render import window, manager
-from fluent.render.property import ColorProperty, WeightProperty
+from fluent.render.property import Color, Weight
 from fluent.widget import GenericWidget
 
 
@@ -21,7 +21,7 @@ class Text(GenericWidget):
         weight of the text
     """
 
-    def __init__(self, text, color=ColorProperty.black, size=16, weight=WeightProperty.regular):
+    def __init__(self, text, color=Color.black, size=16, weight=Weight.regular):
         self.text = text
         self.color = color
         self.weight = weight

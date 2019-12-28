@@ -1,6 +1,6 @@
 from fluent.render import boxRGBA, roundedBoxRGBA, \
     rectangleRGBA, roundedRectangleRGBA, window
-from fluent.render.property import ColorProperty
+from fluent.render.property import Color
 from fluent.widget import GenericWidget
 
 
@@ -16,7 +16,7 @@ class FilledBox(GenericWidget):
         color that will be using to draw
     """
 
-    def __init__(self, size, color=ColorProperty.white):
+    def __init__(self, size, color=Color.white):
         self.color = color
 
         super(FilledBox, self).__init__(size=size)
@@ -44,7 +44,7 @@ class FilledRoundedBox(GenericWidget):
         radius that will be using on corners
     """
 
-    def __init__(self, size, color=ColorProperty.white, radius=10):
+    def __init__(self, size, color=Color.white, radius=10):
         self.color = color
         self.radius = radius
 
@@ -70,7 +70,7 @@ class OutlineBox(GenericWidget):
         color that will be using to draw outline
     """
 
-    def __init__(self, size, color=ColorProperty.white):
+    def __init__(self, size, color=Color.white):
         self.color = color
 
         super(OutlineBox, self).__init__(size=size)
@@ -98,7 +98,7 @@ class OutlineRoundedBox(GenericWidget):
         radius that will be using on corners
     """
 
-    def __init__(self, size, color=ColorProperty.white, radius=10):
+    def __init__(self, size, color=Color.white, radius=10):
         self.color = color
         self.radius = radius
 

@@ -1,4 +1,4 @@
-class ColorProperty:
+class Color:
     red = (255, 0, 0, 255)
     green = (0, 255, 0, 255)
     blue = (0, 0, 255, 255)
@@ -6,8 +6,11 @@ class ColorProperty:
     black = (0, 0, 0, 255)
     transparent = (0, 0, 0, 0)
 
+    def rgb(red, green, blue, alpha=255):
+        return red, green, blue, alpha
 
-class AlignProperty:
+
+class Aligner:
     top = 'top'
     bottom = 'bottom'
     left = 'left'
@@ -15,7 +18,7 @@ class AlignProperty:
     center = 'center'
 
 
-class WeightProperty:
+class Weight:
     regular = 'regular'
     bold = 'bold'
     italic = 'italic'

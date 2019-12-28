@@ -1,5 +1,5 @@
 from fluent.render import filledCircleRGBA, circleRGBA, aacircleRGBA, window
-from fluent.render.property import ColorProperty
+from fluent.render.property import Color
 from fluent.widget import GenericWidget
 
 
@@ -15,7 +15,7 @@ class FilledCircle(GenericWidget):
         color that will be using to draw
     """
 
-    def __init__(self, radius, color=ColorProperty.white):
+    def __init__(self, radius, color=Color.white):
         self.radius = radius
         self.color = color
 
@@ -44,7 +44,7 @@ class OutlineCircle(GenericWidget):
         apply anti-aliasing to the circle
     """
 
-    def __init__(self, radius, color=ColorProperty.white, anti_aliasing=True):
+    def __init__(self, radius, color=Color.white, anti_aliasing=True):
         self.radius = radius
         self.color = color
         self.anti_aliasing = anti_aliasing
