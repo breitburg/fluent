@@ -25,7 +25,7 @@ class Text(GenericWidget):
         self.text = text
         self.color = color
         self.weight = weight
-        self.font_size = size
+        self.font_size = size * window.scale
 
         self._apply_changes()
         super(Text, self).__init__(size=self.texture.size)

@@ -74,7 +74,7 @@ class GenericWidget(Widget):
     """
 
     def __init__(self, size):
-        self._size = size  # Setting widget size
+        self._size = [point * window.scale for point in size]  # Setting widget size
 
         super(GenericWidget, self).__init__()
 

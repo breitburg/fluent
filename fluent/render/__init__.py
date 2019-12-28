@@ -4,4 +4,4 @@ from fluent.render.font import manager
 from sdl2.sdlgfx import *   # Graphics render library
 
 
-window = Window()  # Application window
+window = Window(scale=2)  # Application window
