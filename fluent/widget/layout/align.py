@@ -1,5 +1,5 @@
 from fluent.widget.core import GenericWidget
-from fluent.render import align
+from fluent.render.property import AlignProperty
 
 
 class Align(GenericWidget):
@@ -14,7 +14,7 @@ class Align(GenericWidget):
         setting align properties
     """
 
-    def __init__(self, child, align=(align.top, align.left)):
+    def __init__(self, child, align=(AlignProperty.top, AlignProperty.left)):
         self.child = child
         self.align = align
 
@@ -25,14 +25,14 @@ class Align(GenericWidget):
 
         horizontal_padding = vertical_padding = 0
 
-        if self.align[0] == align.bottom:
+        if self.align[0] == AlignProperty.bottom:
             vertical_padding = self._size[1] - self.child.size[1]
-        elif self.align[0] == align.center:
+        elif self.align[0] == AlignProperty.center:
             vertical_padding = self._size[1] / 2 - self.child.size[1] / 2
 
-        if self.align[1] == align.right:
+        if self.align[1] == AlignProperty.right:
             horizontal_padding = self._size[0] - self.child.size[0]
-        elif self.align[1] == align.center:
+        elif self.align[1] == AlignProperty.center:
             horizontal_padding = self._size[0] / 2 - self.child.size[0] / 2
 
         self.child.render(xy=(int(xy[0] + horizontal_padding), int(xy[1] + vertical_padding)))
@@ -48,4 +48,4 @@ class Center(Align):
     """
 
     def __init__(self, child):
-        super(Center, self).__init__(child=child, align=(align.center, align.center))
+        super(Center, self).__init__(child=child, align=(AlignProperty.center, AlignProperty.center))

@@ -3,7 +3,7 @@ from sdl2.ext import FontManager
 from os.path import join
 
 
-path = __file__.replace('/render/font/__init__.py', '/assets/')
+path = __file__.replace('/render/font.py', '/assets/')
 manager = FontManager(font_path=join(path, 'bold.ttf'), size=14)
 
 for font in ['bold_italic.ttf', 'extra_bold.ttf',
