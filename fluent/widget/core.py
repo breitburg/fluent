@@ -27,29 +27,27 @@ class Widget:
 
     def __init__(self, pressed=None):
         self._pressed = pressed  # On widget pressed function bindings
+        self._size = (0, 0)  # Adding dummy widget size
         self.parent = self  # Adding dummy parent property
 
     def build(self):  # Method that will return a widget
         return NotImplemented
 
-    def _update_instance(self):
-        self._instance = self.build()  # Creating the build instance
-        self._instance.parent = self  # Setting parent to the builded instance
-
     def render(self, xy):
-        self._update_instance()  # Updating instance
-        self._instance.render(xy=xy)  # Rendering instance
+        _instance = self.build()  # Creating the build instance
+        _instance.parent = self  # Setting parent to the builded instance
+        _instance.render(xy=xy)  # Rendering instance
+        self._size = _instance.size  # Setting self size
 
-        size = self.size  # Getting widget size
         for touch in window.events:  # Calculating collisions
-            if xy[0] + size[0] > touch[0] > xy[0] and \
-                    xy[1] + size[1] > touch[1] > xy[1] and \
+            if xy[0] + self._size[0] > touch[0] > xy[0] and \
+                    xy[1] + self._size[1] > touch[1] > xy[1] and \
                     self._pressed:  # If pressed property contains any binding
                 self._pressed(self)  # Calling it with self argument
 
     @property
     def size(self):  # Property that contains build instance size
-        return self._instance.size
+        return self._size
 
 
 class GenericWidget(Widget):
@@ -84,5 +82,4 @@ class GenericWidget(Widget):
         return self  # Returning self for rendering
 
     @property
-    def size(self):
-        return self._size
+    def size(self): return self._size
