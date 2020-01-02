@@ -15,5 +15,8 @@ setup(
     ],
     install_requires=[
         'pysdl2', 'reloadr', 'pyyaml'
-    ]
+    ],
+    package_data={
+        'fluent': ['assets/*']
+    }
 )
