@@ -33,20 +33,21 @@ class Widget:
     def build(self):  # Method that will return a widget
         return NotImplemented
 
-    def render(self, xy):
+    def _update_instance(self):
+        self._instance = self.build()  # Creating the build instance
         self._instance.parent = self  # Setting parent to the builded instance
+
+    def render(self, xy):
+        self._update_instance()  # Updating instance
         self._instance.render(xy=xy)  # Rendering instance
 
+        size = self.size  # Getting widget size
         for touch in window.events:  # Calculating collisions
-            if xy[0] + self._size[0] > touch[0] > xy[0] and \
-                    xy[1] + self._size[1] > touch[1] > xy[1] and \
+            if xy[0] + size[0] > touch[0] > xy[0] and \
+                    xy[1] + size[1] > touch[1] > xy[1] and \
                     self._pressed:  # If pressed property contains any binding
                 self._pressed(self)  # Calling it with self argument
-    
-    @property
-    def _instance(self):
-        return self.build()
-    
+
     @property
     def size(self):  # Property that contains build instance size
         return self._instance.size
