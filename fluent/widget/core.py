@@ -34,20 +34,22 @@ class Widget:
         return NotImplemented
 
     def render(self, xy):
-        _instance = self.build()  # Creating the build instance
-        _instance.parent = self  # Setting parent to the builded instance
-        _instance.render(xy=xy)  # Rendering instance
-        self._size = _instance.size  # Setting self size
+        self._instance.parent = self  # Setting parent to the builded instance
+        self._instance.render(xy=xy)  # Rendering instance
 
         for touch in window.events:  # Calculating collisions
             if xy[0] + self._size[0] > touch[0] > xy[0] and \
                     xy[1] + self._size[1] > touch[1] > xy[1] and \
                     self._pressed:  # If pressed property contains any binding
                 self._pressed(self)  # Calling it with self argument
-
+    
+    @property
+    def _instance(self):
+        return self.build()
+    
     @property
     def size(self):  # Property that contains build instance size
-        return self._size
+        return self._instance.size
 
 
 class GenericWidget(Widget):
