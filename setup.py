@@ -14,7 +14,7 @@ setup(
         'Operating System :: OS Independent',
     ],
     install_requires=[
-        'pysdl2', 'reloadr', 'pyyaml'
+        'pysdl2', 'reloadr'
     ],
     package_data={
         'fluent': ['assets/*']

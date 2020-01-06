@@ -1,1 +1,3 @@
-__version__ = '1.0.0-beta4'
+from .version import __version__
+
+__all__ = ['core', '__version__']

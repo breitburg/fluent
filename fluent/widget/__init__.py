@@ -1,1 +1,3 @@
-from fluent.widget.core import GenericWidget, Widget
+__all__ = [
+    'text'
+]
