@@ -1,5 +1,5 @@
 __all__ = [
     'font', 'launch',
     'property', 'widget',
-    'window'
+    'window', 'debug'
 ]

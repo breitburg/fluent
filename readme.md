@@ -1,24 +1,30 @@
 ![](https://imgur.com/download/6hKZqiN/)
 
-**Fluent** – Simple and powerful multi-platform development framework.
+**Fluent** – Pretty multi-platform development framework.
 
-## Example
+> **Warning**  
+> Fluent isn't ready for production yet!
 
-Here is the basic *Hello, world* code example:
+## Usage
+
+Here is the basic *Hello, world* example:
 
 ```python
-from fluent.essential import *  # Importing library
+from fluent.core.launch import launch
+from fluent.core.property import Color
+from fluent.widget.shape import Text
 
-
-# Calling launch method
 launch(
-    # Setting target to Text widget
     target=Text(
-        text='Hello, Fluent',  # Setting text to the widget
-        color=color.white  # Setting color to the widget
-    )  # Text
-)  # launch
+        text='Hello, Fluent',
+        color=Color(255, 255, 255)
+    )
+)
 ```
+
+Execution result:
+
+![](https://i.imgur.com/7kcBUeL.png)
 
 ## Features
 
@@ -37,18 +43,12 @@ The simplest installation way is using `pip`. You can install the latest stable 
 $ pip install libfluent
 ```
 
-Also, you need to have `sdl2-gfx` and `sdl2-ttf` library. You can download it [here](http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip) and [here](https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.15.zip). Unpack that, and execute following commands to compile and install the library:
+Also, you need to have `sdl2-gfx` and `sdl2-ttf` libraries installed. You can download it from [here](http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.4.zip) and [here](https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.15.zip). Unpack that, and execute following commands to compile and install the libraries:
 
 ```console
 $ ./configure
 $ make
 $ make install
-```
-
-Or, in the latest release we added automated installation script that installs the latest version from our repository and installs all SDL additional packages. Execute that using:
-
-```console
-$ sh bin/install.sh
 ```
 
 ## Requirements

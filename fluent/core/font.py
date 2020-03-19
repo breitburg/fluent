@@ -1,10 +1,9 @@
-from sdl2.ext import FontManager
-
 from os.path import join
+
+from sdl2.ext import FontManager
 
 from fluent.core.property import Weight, Color
 from fluent.core.window import window
-
 
 path = __file__.replace('/core/font.py', '/assets/')
 
@@ -49,7 +48,4 @@ class Font:
         return texture
 
 
-opensans = Font(['regular.ttf', 'bold_italic.ttf', 'extra_bold.ttf',
-                 'extra_bold_italic.ttf', 'italic.ttf', 'light.ttf',
-                 'light_italic.ttf', 'regular.ttf', 'semi_bold.ttf',
-                 'semi_bold_italic.ttf'])
+default = Font(['product_sans_regular.ttf', 'product_sans_bold.ttf'])

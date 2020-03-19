@@ -2,19 +2,14 @@ from fluent.core.window import window
 
 
 class Widget:
-    def __init__(self, pressed: object = None):
+    def __init__(self, pressed=None):
         self._pressed = pressed
-        self.parent = self
 
         # Instantiating build widget
         self._instantiate()
 
     def _instantiate(self) -> None:
-        self._instance = self.build()
-
-        # Checking if widget builds itself
-        _parent = self.parent if self.__class__ == self._instance.__class__ else self
-        self._instance.parent = _parent
+        self._instance = self.build()  # Setting up build widget
 
     def build(self) -> object:
         raise NotImplementedError
@@ -36,9 +31,9 @@ class Widget:
         return self._instance.size
 
 
-class GenericWidget(Widget):
+class RenderWidget(Widget):
     def __init__(self, size):
-        super(GenericWidget, self).__init__()
+        super(RenderWidget, self).__init__()
         self._size = size
 
     def build(self) -> object:
