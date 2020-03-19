@@ -30,32 +30,10 @@ class Stack(RenderWidget):
 
 
 class Row(Stack):
-    """A class used to represent an row
-
-    Parameters
-    ----------
-    children : list<Widget>
-        widgets that will be displayed in a row
-
-    spacing : int
-        amount of spacing we apply to children
-    """
-
     def __init__(self, children, spacing=10):
         super(Row, self).__init__(children=children, spacing=spacing, coordinate=0)
 
 
 class Column(Stack):
-    """A class used to represent an column
-
-    Parameters
-    ----------
-    children : list<Widget>
-        widgets that will be displayed in a column
-
-    spacing : int
-        amount of spacing we apply to children
-    """
-
     def __init__(self, children, spacing=10):
         super(Column, self).__init__(children=children, spacing=spacing, coordinate=1)

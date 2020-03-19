@@ -6,17 +6,6 @@ from fluent.core.window import window
 
 
 class FilledCircle(RenderWidget):
-    """A class used to represent an circle
-
-    Parameters
-    ----------
-    radius : int
-        radius that will be using to draw
-
-    color : tuple, optional
-        color that will be using to draw
-    """
-
     def __init__(self, radius, color=Color(red=255, green=255, blue=255)):
         self.radius = radius
         self.color = color
@@ -32,20 +21,6 @@ class FilledCircle(RenderWidget):
 
 
 class OutlineCircle(RenderWidget):
-    """A class used to represent an circle
-
-    Parameters
-    ----------
-    radius : int
-        radius that will be using to draw
-
-    color : tuple, optional
-        color that will be using to draw
-
-    anti_aliasing : bool, optional
-        apply anti-aliasing to the circle
-    """
-
     def __init__(self, radius, color=Color(red=255, green=255, blue=255), anti_aliasing=True):
         self.radius = radius
         self.color = color

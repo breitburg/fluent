@@ -7,17 +7,6 @@ from fluent.core.window import window
 
 
 class FilledBox(RenderWidget):
-    """A class used to represent an filled box (rectangle)
-
-    Parameters
-    ----------
-    size : tuple
-        represents size of the box
-
-    color : tuple, optional
-        color that will be using to draw
-    """
-
     def __init__(self, size, color=Color(red=255, green=255, blue=255)):
         self.color = color
 
@@ -32,20 +21,6 @@ class FilledBox(RenderWidget):
 
 
 class FilledRoundedBox(RenderWidget):
-    """A class used to represent an filled rounded box (rectangle)
-
-    Parameters
-    ----------
-    size : tuple
-        represents size of the box
-
-    color : tuple, optional
-        color that will be using to draw
-
-    radius : int, optional
-        radius that will be using on corners
-    """
-
     def __init__(self, size, color=Color(red=255, green=255, blue=255), radius=10):
         self.color = color
         self.radius = radius
@@ -61,17 +36,6 @@ class FilledRoundedBox(RenderWidget):
 
 
 class OutlineBox(RenderWidget):
-    """A class used to represent an outline box (rectangle)
-
-    Parameters
-    ----------
-    size : tuple
-        represents size of the box
-
-    color : tuple, optional
-        color that will be using to draw outline
-    """
-
     def __init__(self, size, color=Color(red=255, green=255, blue=255)):
         self.color = color
 
@@ -86,20 +50,6 @@ class OutlineBox(RenderWidget):
 
 
 class OutlineRoundedBox(RenderWidget):
-    """A class used to represent an outline rounded box (rectangle)
-
-    Parameters
-    ----------
-    size : tuple
-        represents size of the box
-
-    color : tuple, optional
-        color that will be using to draw
-
-    radius : int, optional
-        radius that will be using on corners
-    """
-
     def __init__(self, size, color=Color(red=255, green=255, blue=255), radius=10):
         self.color = color
         self.radius = radius

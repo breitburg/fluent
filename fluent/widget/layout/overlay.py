@@ -2,17 +2,6 @@ from fluent.core.widget import RenderWidget
 
 
 class Overlay(RenderWidget):
-    """A class used to represent an overlay
-
-    Parameters
-    ----------
-    top : Widget
-        top widget in the overlay
-
-    bottom : Widget
-        bottom widget in the overlay
-    """
-
     def __init__(self, bottom, top):
         self.bottom = bottom
 

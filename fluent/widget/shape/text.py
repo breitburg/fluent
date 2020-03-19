@@ -5,26 +5,6 @@ from fluent.core.window import window
 
 
 class Text(RenderWidget):
-    """A class used to represent an text
-
-        Parameters
-        ----------
-        text : str
-            text that will be displayed
-
-        font : Font, optional
-            font that will be used for displaying text
-
-        color : Color, optional
-            color that will be using to draw
-
-        size : int, optional
-            size of the text
-
-        weight : Weight, optional
-            weight of the text
-    """
-
     def __init__(self, text, font=default, color=Color(red=0, green=0, blue=0),
                  size=24, weight=Weight(string='product_sans_regular')):
         self.text = text
