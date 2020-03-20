@@ -6,7 +6,7 @@ setup(
     version=__version__,
     author='Breitburg',
     include_package_data=True,
-    url='https://github.com/libfluent/fluent',
+    url='https://github.com/breitburg/fluent',
     packages=find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',

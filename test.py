@@ -8,7 +8,7 @@ from fluent.core.debug import auto_reload
 @auto_reload
 class TestWidget(Widget):
     def build(self) -> object:
-        return Text(text='Hello, world', color=Color(255, 255, 255))
+        return Text(text='here it is', color=Color(255, 255, 255))
 
 
 launch(

@@ -1,6 +1,8 @@
 ![](https://imgur.com/download/6hKZqiN/)
 
-**Fluent** – Pretty multi-platform development framework.
+# Fluent
+
+Pretty multi-platform apps development framework.
 
 > **Warning**  
 > Fluent isn't ready for production yet!
