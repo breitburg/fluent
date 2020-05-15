@@ -4,7 +4,7 @@
 
 Pretty multi-platform apps development framework.
 
-> **⚠️ Warning**  
+> **⚠️**  
 > Fluent isn't ready for production yet!
 
 ## Usage
@@ -53,7 +53,7 @@ $ make
 $ make install
 ```
 
-> **⚡️ Alert**  
+> **⚡️**  
 >️ This project is using [Poetry](https://python-poetry.org/) as package manager.  
 > If you want to build package by your own please use `poetry build.`
 
